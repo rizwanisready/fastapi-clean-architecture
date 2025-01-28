@@ -1,5 +1,4 @@
 from typing import List, Optional
-from uuid import UUID
 from fastapi import APIRouter, Depends, status
 
 from schemas.pydantic.AuthorSchema import (
@@ -28,7 +27,7 @@ def index(
     ]
 
 @AuthorRouter.get("/{id}", response_model=AuthorSchema)
-def get(id: UUID, authorService: AuthorService = Depends()):
+def get(id: int, authorService: AuthorService = Depends()):
     return authorService.get(id).normalize()
 
 @AuthorRouter.post(
@@ -44,7 +43,7 @@ def create(
 
 @AuthorRouter.patch("/{id}", response_model=AuthorSchema)
 def update(
-    id: UUID,
+    id: int,
     author: AuthorPostRequestSchema,
     authorService: AuthorService = Depends(),
 ):
@@ -52,14 +51,14 @@ def update(
 
 @AuthorRouter.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete(
-    id: UUID, authorService: AuthorService = Depends()
+    id: int, authorService: AuthorService = Depends()
 ):
     authorService.delete(id)
     return None
 
 @AuthorRouter.get("/{id}/books/", response_model=List[BookSchema])
 def get_books(
-    id: UUID, authorService: AuthorService = Depends()
+    id: int, authorService: AuthorService = Depends()
 ):
     return [
         book.normalize()

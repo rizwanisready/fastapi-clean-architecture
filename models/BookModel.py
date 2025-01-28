@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String
+from sqlalchemy import Integer, Column, String  # Add other necessary imports as well
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
 from sqlalchemy.orm import relationship
@@ -9,7 +9,7 @@ class Book(EntityMeta):
     __tablename__ = "books"
 
     # Define id as UUID with primary key and default value
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    id = Column(Integer, primary_key=True)
     name = Column(String(40), nullable=False)
     
     # Many-to-many relationship with Author
