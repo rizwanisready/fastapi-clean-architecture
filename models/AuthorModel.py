@@ -20,6 +20,7 @@ class Author(EntityMeta):
         "Book",
         lazy="dynamic",
         secondary=book_author_association,
+        back_populates="authors",  # Added back_populates here
     )
 
     def normalize(self):

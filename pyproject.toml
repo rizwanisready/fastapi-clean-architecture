@@ -1,15 +1,22 @@
-[tool.poetry]
-name = "zing"
+[project]
+name = "zing-hr"
 version = "0.1.0"
-description = ""
-authors = ["pratikmain2525 <m25297251@gmail.com>"]
+description = "Travel Module for ZingHR HRMS which facilitates business trip management to the subscribed companies(zing HR clients)."
+authors = [
+    {name = "rizwanisready",email = "rizwanisready@gmail.com"}
+]
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-pydantic-settings = "2.7.1"
-
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi (==0.115.7)",
+    "SQLAlchemy (==2.0.37)",
+    "pydantic-settings (==2.7.1)",
+    "python-dotenv (==1.0.1)",
+    "psycopg2-binary (==2.9.10)",
+    "sqlalchemy-cockroachdb (==2.0.2)",
+    "uvicorn (==0.34.0)"
+]
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"

@@ -1,9 +1,8 @@
 from sqlalchemy import Integer, Column, String  # Add other necessary imports as well
-from sqlalchemy.dialects.postgresql import UUID
-import uuid
 from sqlalchemy.orm import relationship
 from models.BaseModel import EntityMeta
 from models.BookAuthorAssociation import book_author_association
+
 
 class Book(EntityMeta):
     __tablename__ = "books"
@@ -11,7 +10,7 @@ class Book(EntityMeta):
     # Define id as UUID with primary key and default value
     id = Column(Integer, primary_key=True)
     name = Column(String(40), nullable=False)
-    
+
     # Many-to-many relationship with Author
     authors = relationship(
         "Author",
