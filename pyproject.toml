@@ -1,7 +1,7 @@
 [project]
-name = "zing-hr"
+name = "fastapi-clean-architecture"
 version = "0.1.0"
-description = "Travel Module for ZingHR HRMS which facilitates business trip management to the subscribed companies(zing HR clients)."
+description = "Example Application Interface using FastAPI framework in Python 3. The repo contains a simple example of a clean architecture using cockroachdb DataBase and SQLAlchemy as ORM."
 authors = [
     {name = "rizwanisready",email = "rizwanisready@gmail.com"}
 ]

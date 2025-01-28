@@ -8,6 +8,12 @@ This example showcases Repository Pattern in Hexagonal Architecture _(also known
 
 ## Installation
 
+- Install poetry for env management 
+
+  ```sh
+  $ pip install poetry
+  ```
+
 - To store virtual environments in the project root run 
 
   ```sh
