@@ -1,15 +1,15 @@
-[tool.black]
-line-length = 60
+[tool.poetry]
+name = "zing"
+version = "0.1.0"
+description = ""
+authors = ["pratikmain2525 <m25297251@gmail.com>"]
+readme = "README.md"
 
-[tool.isort]
-profile = "black"
-src_paths = ["configs", "core", "dependencies", "models", "repositories", "routers", "schemas", "services"]
-virtual_env = "env"
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic-settings = "2.7.1"
 
-[tool.pytest.ini_options]
-pythonpath = [
-  "."
-]
-testpaths = [
-  "__tests__"
-]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

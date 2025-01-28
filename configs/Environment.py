@@ -1,7 +1,6 @@
 from functools import lru_cache
 import os
-
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings # type: ignore
 
 
 @lru_cache

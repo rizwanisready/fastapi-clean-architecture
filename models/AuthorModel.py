@@ -1,7 +1,6 @@
 from sqlalchemy import (
     Column,
     Integer,
-    PrimaryKeyConstraint,
     String,
 )
 from sqlalchemy.orm import relationship
@@ -15,15 +14,13 @@ from models.BookAuthorAssociation import (
 class Author(EntityMeta):
     __tablename__ = "authors"
 
-    id = Column(Integer)
+    id = Column(Integer, primary_key=True)
     name = Column(String(16), nullable=False)
     books = relationship(
         "Book",
         lazy="dynamic",
         secondary=book_author_association,
     )
-
-    PrimaryKeyConstraint(id)
 
     def normalize(self):
         return {
