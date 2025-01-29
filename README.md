@@ -26,10 +26,10 @@ This example showcases Repository Pattern in Hexagonal Architecture _(also known
   $ poetry install
   ```
 
-- Activate the virtualenv:
+- Activate the virtualenv(poetry shell moved to a plugin: poetry-plugin-shell):
 
   ```sh
-  $ poetry shell
+  $ /path/to/virtual/environment/bin/activate.bat
   ```
 
   OR
