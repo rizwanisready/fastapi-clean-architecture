@@ -1,9 +1,9 @@
 from unittest import TestCase
 from unittest.mock import create_autospec, patch
 
-from repositories.AuthorRepository import AuthorRepository
-from repositories.BookRepository import BookRepository
-from services.AuthorService import AuthorService
+from app.repositories.AuthorRepository import AuthorRepository
+from app.repositories.BookRepository import BookRepository
+from app.services.AuthorService import AuthorService
 
 
 class TestAuthorService(TestCase):

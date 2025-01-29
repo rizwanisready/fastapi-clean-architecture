@@ -1,9 +1,9 @@
 from typing import List, Optional
 from fastapi import Depends
-from models.AuthorModel import Author
-from models.BookModel import Book
-from repositories.AuthorRepository import AuthorRepository
-from schemas.pydantic.AuthorSchema import AuthorSchema
+from app.models.AuthorModel import Author
+from app.models.BookModel import Book
+from app.repositories.AuthorRepository import AuthorRepository
+from app.schemas.pydantic.AuthorSchema import AuthorSchema
 
 class AuthorService:
     authorRepository: AuthorRepository

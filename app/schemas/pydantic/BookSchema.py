@@ -1,4 +1,6 @@
 from pydantic import BaseModel
+
+
 # Book post request schema with just the name field
 class BookPostRequestSchema(BaseModel):
     name: str

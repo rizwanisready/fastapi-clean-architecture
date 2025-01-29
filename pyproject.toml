@@ -1,21 +1,20 @@
-[project]
+[tool.poetry]
 name = "fastapi-clean-architecture"
 version = "0.1.0"
-description = "Example Application Interface using FastAPI framework in Python 3. The repo contains a simple example of a clean architecture using cockroachdb DataBase and SQLAlchemy as ORM."
-authors = [
-    {name = "rizwanisready",email = "rizwanisready@gmail.com"}
-]
+description = "Example Application Interface using FastAPI framework in Python 3. The repo contains a simple example of a clean architecture using CockroachDB and SQLAlchemy as ORM."
+authors = ["rizwanisready <rizwanisready@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.11"
-dependencies = [
-    "fastapi (==0.115.7)",
-    "SQLAlchemy (==2.0.37)",
-    "pydantic-settings (==2.7.1)",
-    "python-dotenv (==1.0.1)",
-    "psycopg2-binary (==2.9.10)",
-    "sqlalchemy-cockroachdb (==2.0.2)",
-    "uvicorn (==0.34.0)"
-]
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+fastapi = "0.115.7"
+SQLAlchemy = "2.0.37"
+pydantic-settings = "2.7.1"
+python-dotenv = "1.0.1"
+psycopg2-binary = "2.9.10"
+sqlalchemy-cockroachdb = "2.0.2"
+uvicorn = "0.34.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

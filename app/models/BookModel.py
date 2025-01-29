@@ -1,7 +1,7 @@
 from sqlalchemy import Integer, Column, String  # Add other necessary imports as well
 from sqlalchemy.orm import relationship
-from models.BaseModel import EntityMeta
-from models.BookAuthorAssociation import book_author_association
+from app.models.BaseModel import EntityMeta
+from app.models.BookAuthorAssociation import book_author_association
 
 
 class Book(EntityMeta):
